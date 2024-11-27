@@ -75,12 +75,17 @@ function App() {
     },
   ];
 
+  const filteredTasks = tasks.filter((task) => (task.state = "backlog"));
+  console.log(filteredTasks);
+
   const renderBacklogs = () => {
-    <ul>
-      {tasks.filter((task) => (
-        <li key={task.state}>{task}</li>
-      ))}
-    </ul>;
+    return (
+      <ul>
+        {filteredTasks.map((task) => (
+          <li key={task.state}>{task.title}</li>
+        ))}
+      </ul>
+    );
   };
 
   // console.log(tasks);
