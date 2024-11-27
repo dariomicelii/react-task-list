@@ -78,7 +78,7 @@ function App() {
   const renderBacklogs = () => {
     <ul>
       {tasks.filter((task) => (
-        <li key={task.state === "backlog"}>{task}</li>
+        <li key={task.state}>{task}</li>
       ))}
     </ul>;
   };
