@@ -75,23 +75,21 @@ function App() {
     },
   ];
 
-  const renderBacklogs = (tasks) => {
-    return (
-      <ul>
-        {() =>
-          tasks.filter((task) => <li key={task.state}>{task.priority}</li>)
-        }
-      </ul>
-    );
+  const renderBacklogs = () => {
+    <ul>
+      {tasks.filter((task) => (
+        <li key={task.state === "backlog"}>{task}</li>
+      ))}
+    </ul>;
   };
 
-  console.log(tasks);
+  // console.log(tasks);
 
   return (
     <>
       <h1>Task Manager</h1>
       <h2>Current tasks</h2>
-      {renderBacklogs(tasks)}
+      {renderBacklogs()}
     </>
   );
 }
