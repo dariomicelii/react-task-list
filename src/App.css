@@ -1,0 +1,41 @@
+header {
+  padding: 0.5rem, 1rem;
+  background-color: aquamarine;
+}
+
+section {
+  padding: 1rem 0;
+  border-bottom: 1px solid currentColor;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.4rem 0.88rem;
+  background-color: orange;
+  margin-left: 0.5rem;
+}
+
+.label.label-success {
+  background-color: greenyellow;
+}
+
+.label.label-danger {
+  background-color: red;
+}
+
+.label.label-success {
+  background-color: lightskyblue;
+}
